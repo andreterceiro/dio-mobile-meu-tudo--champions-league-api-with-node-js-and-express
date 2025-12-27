@@ -30,6 +30,10 @@ export const getPlayerByIdService = async (id: number) => {
     return response;
 }
 export const insertPlayerService = async (data: PlayerModel) => {
-    await insertPlayer(data);
-    return await created(data);
+    if (data) {
+        await insertPlayer(data);
+        return await created(data);
+    } else {
+        return await noContent();
+    }
 }
