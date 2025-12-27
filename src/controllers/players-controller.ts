@@ -1,9 +1,7 @@
 import express, {Request, Response} from "express";
 
-function configuringEndpoints(app: express.Application) {
-    app.get("/", (request: Request, response: Response) => {
-        response.send("Hello world");
-    });
+function getPlayer(request: Request, response: Response) {
+    response.send({id: 1, name: "CR7"});
 }
 
-export default configuringEndpoints;
+export default getPlayer;
