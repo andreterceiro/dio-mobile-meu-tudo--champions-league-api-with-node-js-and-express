@@ -1,5 +1,5 @@
-import { findAllPlayers, findPlayerById } from "../repositories/players-repository";
-import { noContent, ok } from "../utils/http-helper";
+import { insertPlayer, findAllPlayers, findPlayerById } from "../repositories/players-repository";
+import { noContent, ok, created } from "../utils/http-helper";
 
 export const getPlayerDataService = async () => {
     const data = await findAllPlayers();
@@ -27,4 +27,8 @@ export const getPlayerByIdService = async (id: number) => {
     }
 
     return response;
+}
+export const insertPlayerService = async (data: Object) => {
+    await insertPlayer(data);
+    return await created(data);
 }
