@@ -1,6 +1,6 @@
 import express, {Request, Response} from "express";
 import { getPlayerData } from "../services/players-service";
-import { HttpResponse } from "../utils/http-helper";
+import { HttpResponse } from "../models/http-response-model"
 
 async function getPlayer(req: Request, res: Response) {
     const data = await getPlayerData();
