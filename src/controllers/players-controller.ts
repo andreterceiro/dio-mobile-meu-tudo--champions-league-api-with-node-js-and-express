@@ -3,7 +3,7 @@ import { getPlayerData } from "../services/players-service";
 
 
 async function getPlayer(request: Request, response: Response) {
-    response.send(await getPlayerData());
+    response.status(200).json(await getPlayerData());
 }
 
 export default getPlayer;
