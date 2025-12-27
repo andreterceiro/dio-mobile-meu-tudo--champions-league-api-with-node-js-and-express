@@ -13,3 +13,10 @@ export const noContent = async (): Promise<HttpResponse> => {
         body: null
     }
 }
+
+export const created = async (data: any): Promise<HttpResponse> => {
+    return {
+        statusCode: 201,
+        body: data
+    }
+}
