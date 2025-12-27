@@ -1,7 +1,9 @@
 import express, {Request, Response} from "express";
+import { getPlayerData } from "../services/players-service";
 
-function getPlayer(request: Request, response: Response) {
-    response.send({id: 1, name: "CR7"});
+
+async function getPlayer(request: Request, response: Response) {
+    response.send(await getPlayerData());
 }
 
 export default getPlayer;
