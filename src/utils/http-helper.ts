@@ -12,7 +12,7 @@ export const ok = async (data: any): Promise<HttpResponse> => {
 
 export const noContent = async (): Promise<HttpResponse> => {
     return {
-        statusCode: 200,
+        statusCode: 204,
         body: null
     }
 }
