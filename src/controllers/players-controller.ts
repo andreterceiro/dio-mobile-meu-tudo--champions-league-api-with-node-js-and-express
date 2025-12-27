@@ -1,6 +1,5 @@
 import {Request, Response} from "express";
-import { getPlayerDataService, getPlayerByIdService } from "../services/players-service";
-import { PlayerModel } from "../models/player-model";
+import { insertPlayerService, getPlayerDataService, getPlayerByIdService } from "../services/players-service";
 
 export async function getPlayer(req: Request, res: Response) {
     const data = await getPlayerDataService();
@@ -15,5 +14,6 @@ export async function getPlayerById(req: Request, res: Response) {
 };
 
 export async function insertPlayer(req: Request, res: Response) {
-    res.status(200).json({"ok": "ok"});
+    const data = await insertPlayerService(req.body);
+    res.status(data.statusCode).json(data.body);
 }
