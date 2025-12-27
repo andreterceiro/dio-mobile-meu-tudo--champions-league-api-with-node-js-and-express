@@ -3,3 +3,5 @@
 ```sh
 npx tsc --init
 ```
+
+This command creates the file 'tsconfig.json'.
