@@ -1,3 +1,4 @@
+import { PlayerModel } from "../models/player-model";
 import { insertPlayer, findAllPlayers, findPlayerById } from "../repositories/players-repository";
 import { noContent, ok, created } from "../utils/http-helper";
 
@@ -28,7 +29,7 @@ export const getPlayerByIdService = async (id: number) => {
 
     return response;
 }
-export const insertPlayerService = async (data: Object) => {
+export const insertPlayerService = async (data: PlayerModel) => {
     await insertPlayer(data);
     return await created(data);
 }
