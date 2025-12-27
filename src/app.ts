@@ -1,12 +1,11 @@
-import express, {Request, Response} from "express";
+import express from "express";
+import configuringEndpoints from './controllers/players-controller'
 
 function createApp() {
     const app = express();
     app.use(express.json());
 
-    app.get("/", (request: Request, response: Response) => {
-        response.send("Hello world");
-    });
+    configuringEndpoints(app);
 
     return app;
 }
