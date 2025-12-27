@@ -1,7 +1,8 @@
+import { findAllPlayers } from "../repositories/players-repository";
 import { noContent, ok } from "../utils/http-helper";
 
 export const getPlayerData = async () => {
-    const data = {id: 1, name: 'Ronaldo'};
+    const data = await findAllPlayers();
 
     let response = null;
 
