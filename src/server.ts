@@ -1,10 +1,7 @@
 import express, {Request, Response} from "express";
+import createApp from "./app";
 
-const app = express();
-
-app.get("/", (request: Request, response: Response) => {
-    response.send("Hello world");
-})
+const app = createApp();
 
 const port = process.env.PORT;
 
