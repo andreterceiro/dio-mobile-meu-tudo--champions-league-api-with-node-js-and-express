@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "5dabef82-3ff3-4b96-b9e2-ff4711bb1f04",
+		"name": "collection padrão",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10956946",
+		"_collection_link": "https://warped-star-269929.postman.co/workspace/API-Champios-League-DIO~4ab8027b-a4e3-451b-8295-7bb5088f7f99/collection/10956946-5dabef82-3ff3-4b96-b9e2-ff4711bb1f04?action=share&source=collection_link&creator=10956946"
+	},
+	"item": [
+		{
+			"name": "find a specific player",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3333/api/players/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"players",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3333/api/players",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 100,\n    \"name\": \"Endrick\",\n    \"club\": \"Lyon\",\n    \"nationality\": \"Brazil\",\n    \"position\": \"Attack\",\n    \"statistics\": {\n        \"Overall\": 90,\n        \"Pace\": 90,\n        \"Shooting\": 90,\n        \"Passing\": 90,\n        \"Dribbling\": 90,\n        \"Defending\": 50,\n        \"Physical\": 90\n    }\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3333/api/players",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"players"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
