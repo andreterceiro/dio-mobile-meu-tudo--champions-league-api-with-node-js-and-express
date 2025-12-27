@@ -6,6 +6,8 @@ app.get("/", (request: Request, response: Response) => {
     response.send("Hello world");
 })
 
-app.listen(process.env.PORT);
-console.log("end of server.ts");
-console.log(process.env.PORT)
+const port = process.env.PORT;
+
+app.listen(port, () => {
+    console.log(`Server running in the port ${port}`)
+});
