@@ -6,7 +6,8 @@
   "scripts": {
     "dist": "tsup src",
     "start:dev": "tsx src/server.ts",
-    "start:watch": "tsx watch src/server.ts"
+    "start:watch": "tsx watch src/server.ts",
+    "start: dist": "npm run dist && node dist/src/server.js"
   },
   "keywords": [],
   "author": "",
