@@ -7,4 +7,8 @@ function createApp() {
     app.get("/", (request: Request, response: Response) => {
         response.send("Hello world");
     });
+
+    return app;
 }
+
+export default createApp;
