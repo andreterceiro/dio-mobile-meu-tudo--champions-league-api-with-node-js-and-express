@@ -1,5 +1,4 @@
 import express from "express";
-import configuringEndpoints from './controllers/players-controller'
 import router from "./router";
 
 function createApp() {
