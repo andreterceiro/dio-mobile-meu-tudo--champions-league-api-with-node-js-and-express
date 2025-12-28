@@ -15,3 +15,8 @@ This command creates the file 'tsconfig.json'.
 # How to find the challenge in DIO platform
 
 In DIO "meutudo - mobile developer" please find for "Recriando a API da Champions League com Node.js e Express"
+
+
+# Observsations
+
+In the challenge teacher used the word "clubs". I used here also, but I think that is more appropriated the word "teams".
