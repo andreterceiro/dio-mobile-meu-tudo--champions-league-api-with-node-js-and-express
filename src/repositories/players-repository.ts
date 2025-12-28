@@ -1,6 +1,6 @@
 import { PlayerModel } from "../models/player-model";
 
-const database: PlayerModel[] = [
+let database: PlayerModel[] = [
     {
         "id": 1,
         "name": "Lionel Messi",
@@ -33,6 +33,22 @@ const database: PlayerModel[] = [
             "Physical": 75
         }
     },
+    {
+        "id": 3,
+        "name": "Neymar",
+        "club": "Santos",
+        "nationality": "Brasil",
+        "position": "Forward",
+        "statistics": {
+            "Overall": 90,
+            "Pace": 81,
+            "Shooting": 92,
+            "Passing": 85,
+            "Dribbling": 90,
+            "Defending": 34,
+            "Physical": 62
+        }
+    },
 ]
 
 export const findAllPlayers = async (): Promise<PlayerModel[]> => {
@@ -46,5 +62,14 @@ export const findPlayerById = async(id: number): Promise<PlayerModel | undefined
 export const insertPlayer = async(data: any): Promise<boolean> => {
     database.push(data);
     return true;
+}
 
+export const removePlayerById = async (id: number): Promise<boolean> => {
+    const index = database.findIndex(p => p.id === id);
+    if (index != -1) {
+        database.splice(index, 1);
+        return true;
+    } else {
+        return false;
+    }
 }
