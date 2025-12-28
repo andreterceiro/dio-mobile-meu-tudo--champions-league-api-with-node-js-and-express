@@ -24,7 +24,7 @@ export const getPlayerByIdService = async (id: number) => {
     if (data) {
         response = await ok(data);
     } else {
-        response = await noContent();
+        response = await notFound();
     }
 
     return response;
