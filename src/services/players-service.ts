@@ -45,7 +45,7 @@ export const deletePlayerByIdService = async (id: number) => {
     if (success) {
         response = await ok({idRemoved: id});
     } else {
-        response = await noContent();
+        response = await notFound();
     }
 
     return response;
