@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import { insertPlayerService, getPlayerDataService, getPlayerByIdService, deletePlayerByIdService } from "../services/players-service";
+import { insertPlayerService, getPlayerDataService, getPlayerByIdService, deletePlayerByIdService, updatePlayerByIdService } from "../services/players-service";
 
 export async function getPlayer(req: Request, res: Response) {
     const data = await getPlayerDataService();
@@ -21,5 +21,11 @@ export async function insertPlayer(req: Request, res: Response) {
 export async function deletePlayerById(req: Request, res: Response) {
     const id = parseInt(req.params.id);
     const data = await deletePlayerByIdService(id);
+    res.status(data.statusCode).json(data.body);
+}
+
+export async function updatePlayerById(req: Request, res: Response) {
+    const id = parseInt(req.params.id);
+    const data = await updatePlayerByIdService(id, req.body);
     res.status(data.statusCode).json(data.body);
 }
