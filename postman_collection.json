@@ -8,6 +8,28 @@
 	},
 	"item": [
 		{
+			"name": "find all players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3333/api/players",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "find a specific player",
 			"request": {
 				"method": "GET",
@@ -25,28 +47,6 @@
 						"api",
 						"players",
 						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "find all players",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "127.0.0.1:3333/api/players",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "3333",
-					"path": [
-						"api",
-						"players"
 					]
 				}
 			},
@@ -81,6 +81,14 @@
 						"players"
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete player",
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
