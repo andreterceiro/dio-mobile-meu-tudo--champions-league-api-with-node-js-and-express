@@ -1,8 +1,8 @@
 import {Request, Response} from "express";
-import { insertPlayerService, getPlayerDataService, getPlayerByIdService, deletePlayerByIdService, updatePlayerByIdService } from "../services/players-service";
+import { insertPlayerService, getPlayersDataService, getPlayerByIdService, deletePlayerByIdService, updatePlayerByIdService } from "../services/players-service";
 
-export async function getPlayer(req: Request, res: Response) {
-    const data = await getPlayerDataService();
+export async function getPlayers(req: Request, res: Response) {
+    const data = await getPlayersDataService();
     res.status(data.statusCode).json(data.body);
 };
 

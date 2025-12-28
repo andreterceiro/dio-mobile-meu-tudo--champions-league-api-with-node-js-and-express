@@ -2,7 +2,7 @@ import { PlayerModel } from "../models/player-model";
 import { insertPlayer, findAllPlayers, findPlayerById, removePlayerById, updatePlayerById } from "../repositories/players-repository";
 import { noContent, ok, created, notFound } from "../utils/http-helper";
 
-export const getPlayerDataService = async () => {
+export const getPlayersDataService = async () => {
     const data = await findAllPlayers();
 
     let response = null;
