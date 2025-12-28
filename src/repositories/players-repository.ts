@@ -73,3 +73,13 @@ export const removePlayerById = async (id: number): Promise<boolean> => {
         return false;
     }
 }
+
+export const updatePlayerById = async (id: number, data: PlayerModel): Promise<boolean> => {
+    const index = database.findIndex(p => p.id === id);
+    if (index != -1) {
+        database[index]= data;
+        return true;
+    } else {
+        return false;
+    }
+}
