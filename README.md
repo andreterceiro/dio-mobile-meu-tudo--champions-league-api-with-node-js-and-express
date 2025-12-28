@@ -10,3 +10,8 @@ This command creates the file 'tsconfig.json'.
 # Teacher's repository related to the project
 
 [link](https://github.com/digitalinnovationone/nodejs-express-api)
+
+
+# How to find the challenge in DIO platform
+
+In DIO "meutudo - mobile developer" please find for "Recriando a API da Champions League com Node.js e Express"
