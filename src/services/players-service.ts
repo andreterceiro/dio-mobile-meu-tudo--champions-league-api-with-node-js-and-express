@@ -52,7 +52,7 @@ export const deletePlayerByIdService = async (id: number) => {
 }
 
 export const updatePlayerByIdService = async (id: number, data: PlayerModel) => {
-    //Overrwriting the ID as the ID passed in the URL
+    //Overwriting the ID as the ID passed in the URL
     data.id = id;
     const success = await updatePlayerById(id, data);
     let response = null;
