@@ -1,55 +1,7 @@
 import { PlayerModel } from "../models/player-model";
+import fs from "fs";
 
-let database: PlayerModel[] = [
-    {
-        "id": 1,
-        "name": "Lionel Messi",
-        "club": "Inter Miami",
-        "nationality": "Argentina",
-        "position": "Forward",
-        "statistics": {
-            "Overall": 93,
-            "Pace": 80,
-            "Shooting": 92,
-            "Passing": 91,
-            "Dribbling": 95,
-            "Defending": 34,
-            "Physical": 65
-        }
-    },
-    {
-        "id": 2,
-        "name": "Cristiano Ronaldo",
-        "club": "Al Nassr",
-        "nationality": "Portugal",
-        "position": "Forward",
-        "statistics": {
-            "Overall": 88,
-            "Pace": 81,
-            "Shooting": 92,
-            "Passing": 78,
-            "Dribbling": 84,
-            "Defending": 34,
-            "Physical": 75
-        }
-    },
-    {
-        "id": 3,
-        "name": "Neymar",
-        "club": "Santos",
-        "nationality": "Brasil",
-        "position": "Forward",
-        "statistics": {
-            "Overall": 90,
-            "Pace": 81,
-            "Shooting": 92,
-            "Passing": 85,
-            "Dribbling": 90,
-            "Defending": 34,
-            "Physical": 62
-        }
-    },
-]
+let database: PlayerModel[] = JSON.parse(fs.readFileSync(__dirname + "/../data/players.json").toString());
 
 export const findAllPlayers = async (): Promise<PlayerModel[]> => {
     return database;
