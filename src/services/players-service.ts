@@ -1,5 +1,5 @@
 import { PlayerModel } from "../models/player-model";
-import { insertPlayer, findAllPlayers, findPlayerById } from "../repositories/players-repository";
+import { insertPlayer, findAllPlayers, findPlayerById, removePlayerById } from "../repositories/players-repository";
 import { noContent, ok, created } from "../utils/http-helper";
 
 export const getPlayerDataService = async () => {
@@ -37,3 +37,18 @@ export const insertPlayerService = async (data: PlayerModel) => {
         return await noContent();
     }
 }
+
+export const deletePlayerByIdService = async (id: number) => {
+    const success = await removePlayerById(id);
+    let response = null;
+
+    if (success) {
+        response = await ok({idRemoved: id});
+    } else {
+        response = await noContent();
+    }
+
+    return response;
+
+}
+
